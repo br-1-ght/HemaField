@@ -89,25 +89,25 @@ export default function TikTok() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary leading-tight mb-4">
+          <h1 className="font-display text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
             Fresh Flowers
             <br />
-            <span className="text-rose-red">Delivered Today</span>
+            <span className="text-rose-red drop-shadow-md">Delivered Today</span>
           </h1>
 
-          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-md mx-auto mb-6">
+          <p className="font-body text-lg md:text-xl text-white/90 font-medium max-w-md mx-auto mb-6 drop-shadow-md">
             Lagos's favorite flower delivery. Same-day delivery guaranteed. 🚚💐
           </p>
 
           {/* Price Offer */}
           <div className="mb-8">
-            <p className="font-body text-sm text-muted-foreground line-through">
+            <p className="font-body text-sm text-white/70 line-through font-medium">
               From ₦25,000
             </p>
-            <p className="font-display text-3xl md:text-4xl font-bold text-rose-red">
+            <p className="font-display text-3xl md:text-4xl font-extrabold text-rose-red drop-shadow-md">
               From ₦23,000
             </p>
-            <p className="font-body text-sm text-forest-green font-semibold">
+            <p className="font-body text-sm text-white font-bold drop-shadow-sm">
               + FREE ₦2,000 discount for TikTok followers
             </p>
           </div>
