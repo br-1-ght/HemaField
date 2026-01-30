@@ -115,7 +115,7 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
         />
 
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
 
         {/* Content */}
         <div className="relative px-8 py-10 text-center">
