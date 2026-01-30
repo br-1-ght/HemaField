@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { LeadCapturePopup } from "@/components/LeadCapturePopup";
 import { OrderFlowersSection } from "@/components/OrderFlowersSection";
 import { Clock, Star, MessageCircle, Gift, Truck, Shield } from "lucide-react";
-import flowersHero from "@/assets/flowers-hero.jpeg";
+import heroCelebrateLife from "@/assets/flowers-hero.jpeg";
 import hemafieldLogo from "@/assets/hemafield-logo.png";
 export default function TikTok() {
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 0, seconds: 0 });
@@ -71,9 +71,9 @@ export default function TikTok() {
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${flowersHero})` }}
+          style={{ backgroundImage: `url(${heroCelebrateLife})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-black/55" />
 
         {/* Content */}
         <div className="relative z-10 container px-4 py-12 text-center">
