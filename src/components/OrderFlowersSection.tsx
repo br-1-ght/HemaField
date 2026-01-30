@@ -66,14 +66,14 @@ function CategoryCard({
         }`}
       >
         <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-          <p className="font-body text-xs uppercase tracking-wider text-gold opacity-90 mb-1">
+          <p className="font-body text-sm md:text-base uppercase tracking-wider text-gold font-semibold mb-1">
             {topText}
           </p>
-          <p className="font-body text-xs text-white/70 mb-3">{subtext}</p>
-          <h3 className="font-display text-2xl md:text-3xl font-semibold mb-1">
+          <p className="font-body text-sm md:text-base text-white/80 font-medium mb-3">{subtext}</p>
+          <h3 className="font-display text-3xl md:text-4xl font-bold mb-1">
             {mainHeading}
           </h3>
-          <p className="font-body text-sm text-white/80">{mainSubtext}</p>
+          <p className="font-body text-base md:text-lg text-white/90 font-medium">{mainSubtext}</p>
         </div>
       </div>
 
@@ -137,27 +137,27 @@ export function OrderFlowersSection() {
   const categories = [
     {
       categoryTitle: "Love & Connection",
-      topText: "Joy & Happiness",
+      topText: "Be Romantic",
       subtext: "Make them smile today",
-      mainHeading: "Romance",
+      mainHeading: "Love & Connection",
       mainSubtext: 'Say "I love you" without words',
       image: heartRosesChocolates,
       overlayItems: ["Valentine", "Proposal", "Birthdays", "Anniversary"],
     },
     {
       categoryTitle: "Celebrations",
-      topText: "Special Moments",
-      subtext: "Mark the occasion",
-      mainHeading: "Celebrate",
-      mainSubtext: "Joy for every milestone",
+      topText: "Flowers that speak gently when words are hard",
+      subtext: "A step towards healing",
+      mainHeading: "Apology",
+      mainSubtext: "Say more than words",
       image: pinkBasket,
-      overlayItems: ["Graduations", "Promotions", "Weddings", "Baby Showers"],
+      overlayItems: ["Thank You", "Apology", "Miss You", "Heart Breaks"],
     },
     {
       categoryTitle: "Sympathy & Support",
       topText: "Comfort & Care",
-      subtext: "When words aren't enough",
-      mainHeading: "Condolence",
+      subtext: "Showing up in meaningful ways",
+      mainHeading: "Care & Support",
       mainSubtext: "Express your heartfelt support",
       image: whiteRosesRedCenter,
       overlayItems: ["Funerals", "Hospital Visits", "Get Well", "Thinking of You"],
@@ -165,11 +165,11 @@ export function OrderFlowersSection() {
     {
       categoryTitle: "Just Because",
       topText: "Everyday Joy",
-      subtext: "No reason needed",
-      mainHeading: "Surprise",
-      mainSubtext: "Brighten their day unexpectedly",
+      subtext: "Flowers for your own soul",
+      mainHeading: "Self-Love",
+      mainSubtext: "Brighten your day unexpectedly",
       image: pinkMixedBouquet,
-      overlayItems: ["Thank You", "Apology", "Miss You", "Self Care"],
+      overlayItems: ["Graduations", "Promotions", "Weddings", "Baby Showers"],
     },
   ];
 
