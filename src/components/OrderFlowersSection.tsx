@@ -299,7 +299,7 @@ export function OrderFlowersSection() {
           <h3 className="font-display text-2xl md:text-3xl font-semibold text-primary text-center mb-8">
             Shop by Occasion 🎁
           </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {categories.map((category, index) => (
               <CategoryCard
                 key={index}
