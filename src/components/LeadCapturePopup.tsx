@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import flowersHero from "@/assets/flowers-hero.jpg";
+import flowersHero from "@/assets/flowers-hero.jpeg";
 
 // EmailJS configuration
 const EMAILJS_PUBLIC_KEY = "kxy-rMZAOtD0I7wCU";
@@ -80,8 +80,8 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
       });
 
       onClose();
-    } catch (error: any) {
-      console.error("EmailJS error:", error);
+    } catch (error) {
+      console.error("EmailJS error:", error instanceof Error ? error.message : error);
       toast({
         title: "Something went wrong",
         description: "Please try again later",

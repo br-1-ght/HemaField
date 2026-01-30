@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import flowersHero from "@/assets/flowers-hero.jpg";
+import flowersHero from "@/assets/flowers-hero.jpeg";
 import valentineFlowers from "@/assets/valentine-flowers.jpg";
 
 // EmailJS configuration
@@ -148,8 +148,8 @@ export function EmailPopup({
       });
       
       handleClose();
-    } catch (error: any) {
-      console.error("EmailJS error:", error);
+    } catch (error) {
+      console.error("EmailJS error:", error instanceof Error ? error.message : error);
       toast({
         title: "Something went wrong",
         description: "Please try again later",

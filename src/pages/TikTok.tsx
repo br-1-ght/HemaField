@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { LeadCapturePopup } from "@/components/LeadCapturePopup";
 import { OrderFlowersSection } from "@/components/OrderFlowersSection";
 import { Clock, Star, MessageCircle, Gift, Truck, Shield } from "lucide-react";
-import flowersHero from "@/assets/flowers-hero.jpg";
+import flowersHero from "@/assets/flowers-hero.jpeg";
 import hemafieldLogo from "@/assets/hemafield-logo.png";
 export default function TikTok() {
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 0, seconds: 0 });

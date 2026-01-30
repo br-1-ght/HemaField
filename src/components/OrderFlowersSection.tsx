@@ -25,6 +25,53 @@ interface CategoryCardProps {
   onOrderClick: () => void;
 }
 
+interface PopularCardProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  onOrderClick: () => void;
+}
+
+function PopularCard({ title, subtitle, image, onOrderClick }: PopularCardProps) {
+  return (
+    <div
+      className="relative rounded-2xl overflow-hidden aspect-[2/3] group cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+      onClick={onOrderClick}
+    >
+      {/* Background Image with lighter overlay */}
+      <img
+        src={image}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+      
+      {/* Light overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-white/30 group-hover:from-black/80 group-hover:via-black/30 transition-all duration-300" />
+      
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 right-0 p-5 text-white transform transition-transform duration-300 group-hover:translate-y-[-8px]">
+        <h3 className="font-display text-2xl md:text-3xl font-bold mb-1 drop-shadow-lg">
+          {title}
+        </h3>
+        <p className="font-body text-sm md:text-base text-white/90 font-medium drop-shadow-md">
+          {subtitle}
+        </p>
+      </div>
+      
+      {/* Hover button */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <Button
+          size="sm"
+          className="bg-white text-primary hover:bg-white/90 font-body font-semibold gap-2 shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300"
+        >
+          <MessageCircle className="h-4 w-4" />
+          Order Now
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 function CategoryCard({
   categoryTitle,
   topText,
@@ -173,6 +220,29 @@ export function OrderFlowersSection() {
     },
   ];
 
+  const popularItems = [
+    {
+      title: "Red Roses",
+      subtitle: "Classic elegance",
+      image: redRosesWhiteBox,
+    },
+    {
+      title: "Mixed Bouquet",
+      subtitle: "Colorful joy",
+      image: pinkMixedBouquet,
+    },
+    {
+      title: "Roses & Chocolates",
+      subtitle: "Sweet romance",
+      image: rosesChocolatesHeart,
+    },
+    {
+      title: "Premium Box",
+      subtitle: "Luxury gift set",
+      image: luxuryBoxSet,
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
@@ -186,15 +256,36 @@ export function OrderFlowersSection() {
           </p>
         </div>
 
+        {/* Most Popular Section */}
+        <div className="mb-16">
+          <h3 className="font-display text-2xl md:text-3xl font-semibold text-primary text-center mb-8">
+            Most Popular ⭐
+          </h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {popularItems.map((item, index) => (
+              <PopularCard
+                key={index}
+                {...item}
+                onOrderClick={handleOrderClick}
+              />
+            ))}
+          </div>
+        </div>
+
         {/* Categories Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {categories.map((category, index) => (
-            <CategoryCard
-              key={index}
-              {...category}
-              onOrderClick={handleOrderClick}
-            />
-          ))}
+        <div className="mb-10">
+          <h3 className="font-display text-2xl md:text-3xl font-semibold text-primary text-center mb-8">
+            Shop by Occasion 🎁
+          </h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {categories.map((category, index) => (
+              <CategoryCard
+                key={index}
+                {...category}
+                onOrderClick={handleOrderClick}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Flower Gallery Section */}
