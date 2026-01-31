@@ -115,14 +115,14 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
         />
 
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
+        <div className="absolute inset-0 bg-black/55" />
 
         {/* Content */}
         <div className="relative px-8 py-10 text-center">
           {/* Close button */}
           <button
             onClick={handleClose}
-            className="absolute right-4 top-4 rounded-full p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="absolute right-4 top-4 rounded-full p-2 text-white/80 transition-colors hover:bg-white/20 hover:text-white"
             aria-label="Close popup"
           >
             <X className="h-5 w-5" />
@@ -131,13 +131,13 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
           {!showForm ? (
             <>
               {/* Initial state - just the button */}
-              <p className="font-display text-xl italic text-primary mb-2">
+              <p className="font-display text-2xl italic font-semibold text-white drop-shadow-lg mb-2">
                 Welcome to Hemafield
               </p>
 
               <h2
                 id="popup-title"
-                className="font-display text-3xl font-semibold text-primary leading-tight"
+                className="font-display text-4xl font-extrabold text-white drop-shadow-lg leading-tight"
               >
                 Your Partner
                 <br />
@@ -145,10 +145,10 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
               </h2>
 
               <div className="mt-4 mb-6">
-                <p className="font-display text-2xl font-bold text-rose-red">
+                <p className="font-display text-3xl font-extrabold text-rose-red drop-shadow-lg">
                   Get ₦2,000 OFF
                 </p>
-                <p className="font-display text-xl text-foreground">
+                <p className="font-display text-2xl font-bold text-white drop-shadow-lg">
                   your first bouquet 💐
                 </p>
               </div>
@@ -166,12 +166,12 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
               {/* Form state */}
               <h2
                 id="popup-title"
-                className="font-display text-2xl font-semibold text-primary leading-tight mb-2"
+                className="font-display text-3xl font-extrabold text-white drop-shadow-lg leading-tight mb-2"
               >
                 Claim Your ₦2,000 OFF 💐
               </h2>
 
-              <p className="font-body text-sm text-muted-foreground mb-6">
+              <p className="font-body text-base font-medium text-white/90 drop-shadow-md mb-6">
                 Fill in your details and we'll send your discount + follow up with you!
               </p>
 
