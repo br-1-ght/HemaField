@@ -24,7 +24,7 @@ const popupContent = {
     welcomeText: "Welcome to Hemafield",
     title: "Your Partner",
     subtitle: "for Special Moments",
-    offer: "Get ₦14,999 OFF",
+    offer: "Get up to ₦14,999 OFF",
     offerSubtext: "your first purchase 💐",
     description: "Fill in your details to unlock your discount + receive same-day delivery offers.",
     buttonText: "Get My Discount",
@@ -237,7 +237,7 @@ export function EmailPopup({
                 id="popup-title"
                 className="font-display text-2xl font-semibold text-primary leading-tight mb-2"
               >
-                {variant === "discount" ? "Claim Your ₦14,999 OFF 💐" : "Get Early Access 💕"}
+                {variant === "discount" ? "Claim up to ₦14,999 OFF 💐" : "Get Early Access 💕"}
               </h2>
 
               <p className="font-body text-sm text-muted-foreground mb-6">

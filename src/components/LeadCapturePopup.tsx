@@ -146,7 +146,7 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
 
               <div className="mt-4 mb-6">
                 <p className="font-display text-3xl font-extrabold text-rose-red drop-shadow-lg">
-                  Get ₦14,999 OFF
+                  Get up to ₦14,999 OFF
                 </p>
                 <p className="font-display text-2xl font-bold text-white drop-shadow-lg">
                   your first purchase 💐
@@ -168,7 +168,7 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
                 id="popup-title"
                 className="font-display text-3xl font-extrabold text-white drop-shadow-lg leading-tight mb-2"
               >
-                Claim Your ₦14,999 OFF 💐
+                Claim up to ₦14,999 OFF 💐
               </h2>
 
               <p className="font-body text-base font-medium text-white/90 drop-shadow-md mb-6">
