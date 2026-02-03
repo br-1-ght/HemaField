@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import flowersHero from "@/assets/flowers-hero.jpeg";
+import flowersHero from "@/assets/flowers-green-hero.jpg";
 
 // EmailJS configuration
 const EMAILJS_PUBLIC_KEY = "kxy-rMZAOtD0I7wCU";

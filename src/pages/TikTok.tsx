@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { LeadCapturePopup } from "@/components/LeadCapturePopup";
 import { OrderFlowersSection } from "@/components/OrderFlowersSection";
 import { Clock, Star, MessageCircle, Gift, Truck, Shield } from "lucide-react";
-import heroCelebrateLife from "@/assets/flowers-hero.jpeg";
+import flowersGreenHero from "@/assets/flowers-green-hero.jpg";
 import hemafieldLogo from "@/assets/hemafield-logo.png";
 export default function TikTok() {
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 0, seconds: 0 });
@@ -71,7 +71,7 @@ export default function TikTok() {
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroCelebrateLife})` }}
+          style={{ backgroundImage: `url(${flowersGreenHero})` }}
         />
         <div className="absolute inset-0 bg-black/55" />
 
@@ -101,14 +101,8 @@ export default function TikTok() {
 
           {/* Price Offer */}
           <div className="mb-8">
-            <p className="font-body text-sm text-white/70 line-through font-medium">
-              From ₦25,000
-            </p>
-            <p className="font-display text-3xl md:text-4xl font-extrabold text-rose-red drop-shadow-md">
-              From ₦23,000
-            </p>
-            <p className="font-body text-sm text-white font-bold drop-shadow-sm">
-              + FREE ₦2,000 discount for TikTok followers
+            <p className="font-display text-3xl md:text-4xl font-extrabold text-white drop-shadow-md">
+              Get ₦15,000 OFF your first purchase
             </p>
           </div>
 
@@ -135,7 +129,7 @@ export default function TikTok() {
             >
               <Gift className="h-6 w-6" />
               <div className="flex flex-col items-start">
-                <span>Get ₦2,000 OFF</span>
+                <span>Get ₦15,000 OFF</span>
                 <span className="text-xs font-normal opacity-70">
                   Claim your discount
                 </span>
