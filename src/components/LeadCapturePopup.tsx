@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import flowersHero from "@/assets/flowers-green-hero.jpg";
+import flowersGreenHero from "@/assets/flowers-green-hero.jpg";
 
 // EmailJS configuration
 const EMAILJS_PUBLIC_KEY = "kxy-rMZAOtD0I7wCU";
@@ -111,7 +111,7 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${flowersHero})` }}
+          style={{ backgroundImage: `url(${flowersGreenHero})` }}
         />
 
         {/* Overlay gradient */}
@@ -146,10 +146,10 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
 
               <div className="mt-4 mb-6">
                 <p className="font-display text-3xl font-extrabold text-rose-red drop-shadow-lg">
-                  Get ₦2,000 OFF
+                  Get ₦14,999 OFF
                 </p>
                 <p className="font-display text-2xl font-bold text-white drop-shadow-lg">
-                  your first bouquet 💐
+                  your first purchase 💐
                 </p>
               </div>
 
@@ -168,7 +168,7 @@ export function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
                 id="popup-title"
                 className="font-display text-3xl font-extrabold text-white drop-shadow-lg leading-tight mb-2"
               >
-                Claim Your ₦2,000 OFF 💐
+                Claim Your ₦14,999 OFF 💐
               </h2>
 
               <p className="font-body text-base font-medium text-white/90 drop-shadow-md mb-6">

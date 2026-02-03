@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import flowersHero from "@/assets/flowers-green-hero.jpg";
+import flowersHero from "@/assets/flowers-hero.jpeg";
 import valentineFlowers from "@/assets/valentine-flowers.jpg";
 
 // EmailJS configuration
@@ -24,8 +24,8 @@ const popupContent = {
     welcomeText: "Welcome to Hemafield",
     title: "Your Partner",
     subtitle: "for Special Moments",
-    offer: "Get ₦2,000 OFF",
-    offerSubtext: "your first bouquet 💐",
+    offer: "Get ₦14,999 OFF",
+    offerSubtext: "your first purchase 💐",
     description: "Fill in your details to unlock your discount + receive same-day delivery offers.",
     buttonText: "Get My Discount",
     formButtonText: "Claim My Discount",
@@ -180,7 +180,7 @@ export function EmailPopup({
         />
         
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
+        <div className="absolute inset-0 bg-background/[0.97]" />
         
         {/* Content */}
         <div className="relative px-8 py-10 text-center">
@@ -237,7 +237,7 @@ export function EmailPopup({
                 id="popup-title"
                 className="font-display text-2xl font-semibold text-primary leading-tight mb-2"
               >
-                {variant === "discount" ? "Claim Your ₦2,000 OFF 💐" : "Get Early Access 💕"}
+                {variant === "discount" ? "Claim Your ₦14,999 OFF 💐" : "Get Early Access 💕"}
               </h2>
 
               <p className="font-body text-sm text-muted-foreground mb-6">
