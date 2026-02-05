@@ -110,7 +110,7 @@ export default function TikTok() {
           {/* Price Offer */}
           <div className="mb-8">
             <p className="font-display text-3xl md:text-4xl font-extrabold text-white drop-shadow-md">
-              Get ₦15,000 OFF your first purchase
+              Get ₦14,999 OFF your first purchase
             </p>
           </div>
 

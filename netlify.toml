@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://instagram.hemafieldflowers.com.ng/*"
+  to = "https://tiktok.hemafieldflowers.com.ng/?source=ig"
+  status = 301
+  force = true
