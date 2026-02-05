@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LeadCapturePopup } from "@/components/LeadCapturePopup";
@@ -6,9 +7,16 @@ import { OrderFlowersSection } from "@/components/OrderFlowersSection";
 import { Clock, Star, MessageCircle, Gift, Truck, Shield } from "lucide-react";
 import flowersGreenHero from "@/assets/flowers-green-hero.jpg";
 import hemafieldLogo from "@/assets/hemafield-logo.png";
+
 export default function TikTok() {
+  const [searchParams] = useSearchParams();
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 0, seconds: 0 });
   const [showPopup, setShowPopup] = useState(false);
+  
+  // Detect source from URL parameter (e.g., ?source=ig or ?source=instagram)
+  const source = searchParams.get("source")?.toLowerCase();
+  const isInstagram = source === "ig" || source === "instagram";
+  const platformName = isInstagram ? "Instagram" : "TikTok";
 
   // Countdown timer
   useEffect(() => {
@@ -81,7 +89,7 @@ export default function TikTok() {
           <div className="inline-flex items-center gap-2 bg-rose-red/90 text-white px-4 py-2 rounded-full mb-6 animate-pulse">
             <Clock className="h-4 w-4" />
             <span className="font-body text-sm font-semibold">
-              TikTok Exclusive: Ends in{" "}
+              {platformName} Exclusive: Ends in{" "}
               {String(timeLeft.hours).padStart(2, "0")}:
               {String(timeLeft.minutes).padStart(2, "0")}:
               {String(timeLeft.seconds).padStart(2, "0")}
@@ -102,7 +110,7 @@ export default function TikTok() {
           {/* Price Offer */}
           <div className="mb-8">
             <p className="font-display text-3xl md:text-4xl font-extrabold text-white drop-shadow-md">
-              Get up to ₦14,999 OFF your first purchase
+              Get ₦15,000 OFF your first purchase
             </p>
           </div>
 
@@ -129,7 +137,7 @@ export default function TikTok() {
             >
               <Gift className="h-6 w-6" />
               <div className="flex flex-col items-start">
-                <span>Get up to ₦14,999 OFF</span>
+                <span>Get ₦15,000 OFF</span>
                 <span className="text-xs font-normal opacity-70">
                   Claim your discount
                 </span>
