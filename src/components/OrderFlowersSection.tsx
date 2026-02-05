@@ -8,7 +8,7 @@ import redBouquetKraft from "@/assets/flowers/red-bouquet-kraft.jpg";
 import heartRosesChocolates from "@/assets/flowers/heart-roses-chocolates.jpg";
 import pinkBasket from "@/assets/flowers/pink-basket.jpg";
 import whiteRosesRedCenter from "@/assets/flowers/white-roses-red-center.jpg";
-import pinkMixedBouquet from "@/assets/flowers/pink-mixed-bouquet.jpeg";
+import pinkMixedBouquet from "@/assets/flowers/pink-mixed-bouquet.jpg";
 import luxuryBoxSet from "@/assets/flowers/luxury-box-set.jpg";
 import chocolateHeartBox from "@/assets/flowers/chocolate-heart-box.jpg";
 import redRosesWhiteBox from "@/assets/flowers/red-roses-white-box.jpg";
@@ -196,7 +196,9 @@ export function OrderFlowersSection() {
         page: "tiktok_landing",
       });
     }
-    const message = encodeURIComponent(`Hi! I want to order flowers for ${category} 🌹`);
+    const message = category === "gallery" 
+      ? encodeURIComponent(`Hi! I want to order beautiful flowers 🌹`)
+      : encodeURIComponent(`Hi! I want to order flowers for ${category} 🌹`);
     window.open(
       `https://wa.me/2348033030982?text=${message}`,
       "_blank"
@@ -245,22 +247,22 @@ export function OrderFlowersSection() {
   const popularItems = [
     {
       title: "Red Roses",
-      subtitle: "199,999k",
-      image: heartRosesChocolates,
+      subtitle: "Classic elegance",
+      image: redRosesWhiteBox,
     },
     {
       title: "Mixed Bouquet",
-      subtitle: "149,999k",
+      subtitle: "Colorful joy",
       image: pinkMixedBouquet,
     },
     {
       title: "Roses & Chocolates",
-      subtitle: "189,999k",
+      subtitle: "Sweet romance",
       image: rosesChocolatesHeart,
     },
     {
       title: "Premium Box",
-      subtitle: "349,999k",
+      subtitle: "Luxury gift set",
       image: luxuryBoxSet,
     },
   ];
@@ -338,7 +340,7 @@ export function OrderFlowersSection() {
                 <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
                   <Button
                     size="sm"
-                    onClick={() => handleOrderClick("Beautiful Flowers")}
+                    onClick={() => handleOrderClick("gallery")}
                     className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-body font-semibold gap-2"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
