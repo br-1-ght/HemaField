@@ -8,7 +8,7 @@ import redBouquetKraft from "@/assets/flowers/red-bouquet-kraft.jpg";
 import heartRosesChocolates from "@/assets/flowers/heart-roses-chocolates.jpg";
 import pinkBasket from "@/assets/flowers/pink-basket.jpg";
 import whiteRosesRedCenter from "@/assets/flowers/white-roses-red-center.jpg";
-import pinkMixedBouquet from "@/assets/flowers/pink-mixed-bouquet.jpg";
+import pinkMixedBouquet from "@/assets/flowers/pink-mixed-bouquet.jpeg";
 import luxuryBoxSet from "@/assets/flowers/luxury-box-set.jpg";
 import chocolateHeartBox from "@/assets/flowers/chocolate-heart-box.jpg";
 import redRosesWhiteBox from "@/assets/flowers/red-roses-white-box.jpg";
