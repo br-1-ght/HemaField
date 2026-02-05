@@ -42,10 +42,14 @@ export default function TikTok() {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "button_click", {
         button_name: "whatsapp_order",
         page: "tiktok_landing",
+        source: platformName.toLowerCase(),
       });
     }
+    const message = isInstagram
+      ? "Hi! I saw your Instagram and want to order flowers 🌹"
+      : "Hi! I saw your TikTok and want to order flowers 🌹";
     window.open(
-      "https://wa.me/2348033030982?text=Hi!%20I%20saw%20your%20TikTok%20and%20want%20to%20order%20flowers%20🌹",
+      `https://wa.me/2348033030982?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
@@ -137,7 +141,7 @@ export default function TikTok() {
             >
               <Gift className="h-6 w-6" />
               <div className="flex flex-col items-start">
-                <span>Get ₦15,000 OFF</span>
+                <span>Get ₦14,999 OFF</span>
                 <span className="text-xs font-normal opacity-70">
                   Claim your discount
                 </span>
